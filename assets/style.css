@@ -34,3 +34,19 @@
 .hero-text {
     z-index: 2;
 }
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.card img {
+    object-fit: cover;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
