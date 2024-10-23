@@ -35,3 +35,35 @@ $('.category-menu div').on('click', (event) => {
     $('.category-menu div').removeClass('active');
     $(event.currentTarget).addClass('active');
 });
+
+
+// toastr notification function
+const notifMessage = [
+    {
+        status: 'success',
+        message: 'Mau top up dengan murah, cepat dan terpercaya? Kito Store jawabannya:D'
+    },
+    {
+        status: 'success',
+        message: 'Jangan lupa berlangganan dengan cara klik tombol Subscribe untuk mendapatkan promo menarik!'
+    },
+    {
+        status: 'error',
+        message: 'Hati-hati dengan akun yang mengatasnamakan Kito Store!'
+    }
+]
+
+let currentIndex = 0 // To track the current notification index
+
+setInterval(() => {
+    if (currentIndex < notifMessage.length) {
+        const { status, message } = notifMessage[currentIndex]
+
+        toastr[status](message)
+
+        currentIndex++ // Move to the next notification
+    } else {
+        currentIndex = 0 // Reset to the first notification
+    }
+}, 1000 * 20)
+// toastr notification function
