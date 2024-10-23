@@ -1,4 +1,4 @@
-const fetchAllGames = (data) => {
+const fetchContent = (data) => {
     let template = ''
 
     data.forEach((d) => {
@@ -17,4 +17,21 @@ const fetchAllGames = (data) => {
     return template
 }
 
-$('#games-list').html(fetchAllGames(gamesList))
+const categories = {
+    games: gamesList,
+    voucher: voucherList,
+    entertainment: entertainmentList
+};
+
+// Page init content
+$('#content-wrapper').html(fetchContent(categories['games']));
+
+// Fetch the content when any category is clicked
+$('.category-menu div').on('click', (event) => {
+    const category = $(event.currentTarget).data('category');
+    $('#content-wrapper').html(fetchContent(categories[category]));
+
+    // Remove 'active' class from all and set to clicked category
+    $('.category-menu div').removeClass('active');
+    $(event.currentTarget).addClass('active');
+});

@@ -50,3 +50,39 @@
     height: 200px;
     border-radius: 10px 10px 0 0;
 }
+
+.category-menu {
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.category-menu div {
+    color: #c4c4c4; /* Default text color */
+    cursor: pointer;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.category-menu div:hover {
+    color: pink; /* Highlight hovered item */
+}
+
+.category-menu .active {
+    color: pink; /* Active item color */
+}
+
+.category-menu .active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: pink;
+    border-radius: 2px;
+}
+
+footer {
+    background: pink;
+}
