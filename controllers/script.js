@@ -65,5 +65,5 @@ setInterval(() => {
     } else {
         currentIndex = 0 // Reset to the first notification
     }
-}, 1000 * 20)
+}, 1000 * 30)
 // toastr notification function
