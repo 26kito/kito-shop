@@ -1,0 +1,36 @@
+.hero {
+    background-image: url('https://pbs.twimg.com/media/GUbl775WYAA4NFg.jpg:large');
+    background-size: cover;
+    background-position: center 30%;
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 8px 8px 8px black;
+}
+
+.darken-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #007bff;
+}
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.hero-text {
+    z-index: 2;
+}
