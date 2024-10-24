@@ -44,7 +44,7 @@
     <div class="hero">
         <div class="darken-hero"></div>
         <div class="container hero-text">
-            <h1 class="display-4">Top Up Game Favorit Kamu</h1>
+            <h1 class="display-4 type-effect">Top Up Game Favorit Kamu</h1>
             <p class="lead">Cepat, Aman, dan Terpercaya</p>
         </div>
     </div>
@@ -121,6 +121,7 @@
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/solid.js" integrity="sha384-/BxOvRagtVDn9dJ+JGCtcofNXgQO/CCCVKdMfL115s3gOgQxWaX/tSq5V8dRgsbc" crossorigin="anonymous"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js" integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typeit@8.8.6/dist/index.umd.js"></script>
 <!-- Library & Dependency -->
 <!-- Models -->
 <script src="../models/games-list.js"></script>
@@ -129,6 +130,20 @@
 <!-- Models -->
  <!-- Core Function -->
 <script src="../controllers/script.js"></script>
+<script>
+$('#content-wrapper-all-products').html(fetchAllContent(categories['games']))
+
+// Typeit hero banner section
+new TypeIt(".type-effect", {
+    strings: "Top Up Game Favorit Kamu",
+    speed: 120,  // typing speed
+    deleteSpeed: 120,  // speed of deletion
+    breakLines: false,  // ensure it doesn't break lines
+    loop: true,  // enable looping
+    nextStringDelay: 3500,  // delay before deleting and retyping
+}).go()
+// End of typeit hero banner section
+</script>
  <!-- Core Function -->
 </body>
 </html>

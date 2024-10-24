@@ -49,7 +49,7 @@ const categories = {
 };
 
 // Page init main content
-$('#content-wrapper').html(fetchContent(categories['games']));
+// $('#content-wrapper').html(fetchContent(categories['games']));
 
 // Fetch the content when any category is clicked
 $('.category-menu div').on('click', (event) => {
@@ -62,7 +62,7 @@ $('.category-menu div').on('click', (event) => {
 });
 
 // Page init fetch all content
-$('#content-wrapper-all-products').html(fetchAllContent(categories['games']));
+// $('#content-wrapper-all-products').html(fetchAllContent(categories['games']));
 
 $('.category-menu-all-products div').on('click', (event) => {
     const category = $(event.currentTarget).data('category');
@@ -98,7 +98,7 @@ $('#search-input').on('keyup', (event) => {
 });
 // End of search feature
 
-// toastr notification function
+// Toastr notification function
 const notifMessage = [
     {
         status: 'success',
@@ -127,4 +127,4 @@ setInterval(() => {
         currentIndex = 0 // Reset to the first notification
     }
 }, 1000 * 10)
-// toastr notification function
+// End of toastr notification function
