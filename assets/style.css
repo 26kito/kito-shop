@@ -2,6 +2,10 @@ a {
     text-decoration: none;
 }
 
+.navbar {
+    background: rgb(248, 166, 180);
+}
+
 .hero {
     background-image: url('https://pbs.twimg.com/media/GUbl775WYAA4NFg.jpg:large');
     background-size: cover;
