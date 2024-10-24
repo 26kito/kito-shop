@@ -10,11 +10,11 @@
 </head>
 <body>
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+<nav class="navbar navbar-expand-lg shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="../index.html">
             <img src="https://static.wikia.nocookie.net/gensin-impact/images/b/ba/Yae_Miko_Icon.png" alt="" style="width: 40px;">
-            <span style="margin-left: 10px;">Kito Store</span>
+            <span><img src="../assets/genshin-element-symbol.png" alt="" style="width: 200px"></span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,16 +22,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/price-list.html">Daftar Harga</a>
+                    <a class="nav-link text-white" href="price-list.html">Daftar Harga</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/about-us.html">Tentang Kami</a>
+                    <a class="nav-link text-white" href="about-us.html">Tentang Kami</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/contact-us.html">Kontak</a>
+                    <a class="nav-link text-white" href="contact-us.html">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="pages/login.html">Login</a>
+                    <a class="nav-link text-white" href="login.html">Login</a>
                 </li>
             </ul>
         </div>
@@ -51,6 +51,13 @@
 <!-- Hero Section -->
 
 <div class="container">
+    <div class="row mt-5">
+        <div class="position-relative">
+            <input type="text" id="search-input" class="form-control" placeholder="Mau cari apa kakak?" aria-label="Search">
+            <i class="fas fa-search position-absolute search-icon" style="color: #aaa;"></i>
+            <div id="search-suggestions" class="suggestions-container" style="top: 100%; z-index: 1;"></div>
+        </div>
+    </div>
     <div class="row mt-3">
         <div class="d-flex mb-3 category-menu category-menu-all-products">
             <div class="p-2 games-category active" data-category="games">Games</div>
