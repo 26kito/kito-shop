@@ -10,5 +10,9 @@ const voucherList = [
     {
         name: "Garena Shells",
         imageUrl: "https://s3.bukalapak.com/product-description-image/868581/large/66_Garena_Shells.png"
-    }
+    },
+    {
+        name: "Xbox: Gift Card",
+        imageUrl: "https://img.utdstc.com/icon/4a4/2ae/4a42aed6331618d037f5ff00f3e8747fb3b7c89111c1598ded60dd958395b105:200"
+    },
 ]
