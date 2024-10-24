@@ -6,7 +6,7 @@
     </li>
     <ul>
         <li>
-            <a href="builtWith">Built With</a>
+            <a href="#builtWith">Built With</a>
         </li>
     </ul>
 </ol>
@@ -24,7 +24,10 @@ This project is a **simple top-up store website**, developed within **two days**
 - **User-Friendly UI**: The website offers a simple, intuitive user interface with well-structured content and easy navigation, allowing users to quickly find and purchase top-up credits.
 - **Search Products**: The website offers a search feature for user to find products they are looking for.
 
-### Technologies Used:
+<br>
+
+<h3 id="builtWith">Built With</h3>
+
 - ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 - ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
