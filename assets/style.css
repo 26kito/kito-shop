@@ -1,9 +1,13 @@
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+}
+
 a {
     text-decoration: none;
 }
 
 .navbar {
-    background: rgb(248, 166, 180);
+    background: rgb(245, 99, 123);
 }
 
 .hero {
@@ -47,6 +51,13 @@ a {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
+}
+
+.card-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
 }
 
 .card-title {
@@ -93,5 +104,28 @@ a {
 }
 
 footer {
-    background: pink;
+    background: rgb(245, 99, 123);
+}
+
+
+/* Search Feature */
+.search-icon {
+    float: right;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+
+#search-suggestions {
+    position: absolute;
+    top: 100%;
+    width: 98%;
+    max-height: 400px; /* Limit the height */
+    background-color: white; /* White background for the suggestions */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    display: none; /* Initially hidden */
 }

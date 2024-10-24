@@ -55,7 +55,7 @@ $('#content-wrapper').html(fetchContent(categories['games']));
 $('.category-menu div').on('click', (event) => {
     const category = $(event.currentTarget).data('category');
     $('#content-wrapper').html(fetchContent(categories[category]));
-    
+
     // Remove 'active' class from all and set to clicked category
     $('.category-menu div').removeClass('active');
     $(event.currentTarget).addClass('active');
@@ -67,11 +67,36 @@ $('#content-wrapper-all-products').html(fetchAllContent(categories['games']));
 $('.category-menu-all-products div').on('click', (event) => {
     const category = $(event.currentTarget).data('category');
     $('#content-wrapper-all-products').html(fetchAllContent(categories[category]));
-    
+
     // Remove 'active' class from all and set to clicked category
     $('.category-menu-all-products div').removeClass('active');
     $(event.currentTarget).addClass('active');
 });
+
+// Search feature
+const allData = [...gamesList, ...voucherList, ...entertainmentList]
+
+$('#search-input').on('keyup', (event) => {
+    const keyword = $(event.currentTarget).val().toLowerCase();
+    let temp = '';
+    const filteredResults = allData.filter(item => item.name.toLowerCase().includes(keyword));
+
+    if (keyword.length > 2 && filteredResults.length > 0) {
+        filteredResults.forEach((row) => {
+            temp += `
+                <div class="suggestion-item d-flex align-items-center p-2">
+                    <img src="${row.imageUrl}" alt="${row.name}" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+                    <span>${row.name}</span>
+                </div>
+            `;
+        });
+
+        $('#search-suggestions').show().html(temp)
+    } else {
+        $('#search-suggestions').hide()
+    }
+});
+// End of search feature
 
 // toastr notification function
 const notifMessage = [
