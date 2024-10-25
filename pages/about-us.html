@@ -31,7 +31,7 @@
                     <a class="nav-link text-white" href="contact-us.html">Kontak</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="login.html">Login</a>
+                    <a class="nav-link text-white authentication-link" href="login.html">Login</a>
                 </li>
             </ul>
         </div>
@@ -76,6 +76,7 @@
 
 
 <!-- Library & Dependency -->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/typeit@8.8.6/dist/index.umd.js"></script>
 <!-- Library & Dependency -->
@@ -90,6 +91,19 @@ new TypeIt(".type-effect", {
     nextStringDelay: 3500,  // delay before deleting and retyping
 }).go()
 // End of typeit hero banner section
+const isLogin = sessionStorage.getItem('isLogin')
+
+if (isLogin) {
+    $('.authentication-link').html('Log out')
+    $('.authentication-link').attr('href', '#')
+}
+
+if ($('.authentication-link').text() === 'Log out') {
+    $('.authentication-link').on('click', () => {
+        sessionStorage.removeItem('isLogin')
+        location.reload()
+    })
+}
 </script>
 </body>
 </html>
